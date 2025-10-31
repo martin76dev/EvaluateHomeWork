@@ -1,0 +1,43 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dotnet environment files
+*.dbmdl
+*.pdb
+
+# Logs
+*.log
+
+# Secrets and config (ajusta según tus archivos)
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Others
+*.vspscc
+*.vssscc
+_ReSharper*/

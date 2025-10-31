@@ -1,0 +1,31 @@
+{
+  "Class": {
+    "Alumno1-tarea1": [
+      {
+        "criterio": "Idea principal y prop\u00F3sito",
+        "nivel": 4,
+        "comentario": "El ensayo presenta claramente el tema y la idea principal, manteni\u00E9ndose enfocado en la importancia de proteger el medio ambiente a trav\u00E9s de las acciones de los naturalistas mencionados."
+      },
+      {
+        "criterio": "Uso de fuentes y evidencia",
+        "nivel": 4,
+        "comentario": "Usa hechos y detalles relevantes de las fuentes, integrando y comparando las contribuciones de Douglas, Muir y Maathai de manera efectiva."
+      },
+      {
+        "criterio": "Organizaci\u00F3n y coherencia",
+        "nivel": 4,
+        "comentario": "El ensayo tiene una introducci\u00F3n clara y tres p\u00E1rrafos bien estructurados sobre cada autor, utilizando transiciones adecuadas para conectar las ideas."
+      },
+      {
+        "criterio": "Conclusi\u00F3n",
+        "nivel": 4,
+        "comentario": "La conclusi\u00F3n resume el tema, refuerza la idea principal sobre la colaboraci\u00F3n en la protecci\u00F3n del medio ambiente y deja una reflexi\u00F3n final sobre la importancia de la acci\u00F3n colectiva."
+      },
+      {
+        "criterio": "Convenciones del lenguaje",
+        "nivel": 3,
+        "comentario": "El texto presenta algunos errores menores de gram\u00E1tica y puntuaci\u00F3n, pero en general se entiende bien y utiliza un lenguaje acad\u00E9mico adecuado."
+      }
+    ]
+  }
+}

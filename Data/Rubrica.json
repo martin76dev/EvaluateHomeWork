@@ -1,0 +1,132 @@
+{
+  "rubrica": {
+    "nombre": "Rúbrica de Escritura ",
+    "criterios": [
+      {
+        "nombre": "Idea principal y propósito",
+        "niveles": [
+          {
+            "nivel": 4,
+            "nota": "Excelente",
+            "observacion": "El ensayo presenta claramente el tema, la idea principal y se mantiene enfocado todo el tiempo."
+          },
+          {
+            "nivel": 3,
+            "nota": "Satisfactorio",
+            "observacion": "El tema y la idea principal están claros, pero a veces el texto pierde foco o se desvía."
+          },
+          {
+            "nivel": 2,
+            "nota": "Básico",
+            "observacion": "El tema y la idea principal se mencionan pero no se desarrollan bien."
+          },
+          {
+            "nivel": 1,
+            "nota": "Inicial",
+            "observacion": "La idea principal no está clara."
+          }
+        ]
+      },
+      {
+        "nombre": "Uso de fuentes y evidencia",
+        "niveles": [
+          {
+            "nivel": 4,
+            "nota": "Excelente",
+            "observacion": "Usa hechos y detalles relevantes de ambas fuentes; los integra y compara."
+          },
+          {
+            "nivel": 3,
+            "nota": "Satisfactorio",
+            "observacion": "Usa evidencia de al menos una fuente; faltan conexiones."
+          },
+          {
+            "nivel": 2,
+            "nota": "Básico",
+            "observacion": "Menciona las fuentes sin explicar su relación con el tema."
+          },
+          {
+            "nivel": 1,
+            "nota": "Inicial",
+            "observacion": "No usa evidencia o usa información incorrecta."
+          }
+        ]
+      },
+      {
+        "nombre": "Organización y coherencia",
+        "niveles": [
+          {
+            "nivel": 4,
+            "nota": "Excelente",
+            "observacion": "Tiene una introducción clara y tres párrafos sobre los autores; usa transiciones."
+          },
+          {
+            "nivel": 3,
+            "nota": "Satisfactorio",
+            "observacion": "Tiene una introducción clara y algún párrafo sobre los autores; usa alguna transición."
+          },
+          {
+            "nivel": 2,
+            "nota": "Básico",
+            "observacion": "El orden es algo confuso; no usa transiciones."
+          },
+          {
+            "nivel": 1,
+            "nota": "Inicial",
+            "observacion": "Está desorganizado y es difícil de seguir."
+          }
+        ]
+      },
+      {
+        "nombre": "Conclusión",
+        "niveles": [
+          {
+            "nivel": 4,
+            "nota": "Excelente",
+            "observacion": "Resume el tema, refuerza la idea principal y deja una reflexión final."
+          },
+          {
+            "nivel": 3,
+            "nota": "Satisfactorio",
+            "observacion": "Cierra el ensayo, pero sin reforzar bien la idea principal."
+          },
+          {
+            "nivel": 2,
+            "nota": "Básico",
+            "observacion": "La conclusión es superficial o repetitiva."
+          },
+          {
+            "nivel": 1,
+            "nota": "Inicial",
+            "observacion": "No tiene conclusión o no tiene relación con el tema."
+          }
+        ]
+      },
+      {
+        "nombre": "Convenciones del lenguaje",
+        "niveles": [
+          {
+            "nivel": 4,
+            "nota": "Excelente",
+            "observacion": "Gramática, ortografía y puntuación correctas; lenguaje académico variado."
+          },
+          {
+            "nivel": 3,
+            "nota": "Satisfactorio",
+            "observacion": "Algunos errores menores, pero el texto se entiende."
+          },
+          {
+            "nivel": 2,
+            "nota": "Básico",
+            "observacion": "Errores frecuentes que afectan la claridad."
+          },
+          {
+            "nivel": 1,
+            "nota": "Inicial",
+            "observacion": "Muchos errores; el texto no se comprende bien."
+          }
+        ]
+      }
+    ]
+  }
+}

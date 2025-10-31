@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-CW3swfu9adqfvdMeDCyTESVuEMcWA",
+  "object": "chat.completion",
+  "created": 1761757466,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"evaluacion\": [\n    {\n      \"criterio\": \"Idea principal y propósito\",\n      \"nivel\": 4,\n      \"comentario\": \"El ensayo presenta claramente el tema y la idea principal, manteniéndose enfocado en la importancia de proteger el medioambiente a través de las acciones de los naturalistas.\"\n    },\n    {\n      \"criterio\": \"Uso de fuentes y evidencia\",\n      \"nivel\": 4,\n      \"comentario\": \"Usa hechos y detalles relevantes de las fuentes, integrando y comparando las contribuciones de Douglas, Muir y Maathai de manera efectiva.\"\n    },\n    {\n      \"criterio\": \"Organización y coherencia\",\n      \"nivel\": 4,\n      \"comentario\": \"El ensayo tiene una introducción clara y tres párrafos bien estructurados sobre cada autor, utilizando transiciones adecuadas entre las ideas.\"\n    },\n    {\n      \"criterio\": \"Conclusión\",\n      \"nivel\": 4,\n      \"comentario\": \"Resume el tema de manera efectiva, refuerza la idea principal y deja una reflexión final sobre la importancia de la colaboración en la protección del medioambiente.\"\n    },\n    {\n      \"criterio\": \"Convenciones del lenguaje\",\n      \"nivel\": 3,\n      \"comentario\": \"Presenta algunos errores menores de gramática y puntuación, pero en general el texto se entiende bien y utiliza un lenguaje académico adecuado.\"\n    }\n  ]\n}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1814,
+    "completion_tokens": 306,
+    "total_tokens": 2120,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_560af6e559"
+}
