@@ -11,41 +11,58 @@ using System.Globalization;
 // Cargar configuración de Google OAuth
 var settings = ConfigurationLoader.LoadGoogleOAuthSettings();
 
-// Print values (do not print secrets in real apps)
-Console.WriteLine("=== EvaluationHW.Application (Console) ===");
-Console.WriteLine("Google OAuth configuration (note: ClientSecret may be stored externally)");
-Console.WriteLine($"ClientId: {settings.ClientId}");
-Console.WriteLine($"ClientSecret: {(string.IsNullOrEmpty(settings.ClientSecret) ? "(not set)" : "(set)")}");
-Console.WriteLine($"RedirectUri: {settings.RedirectUri}");
-if (settings.Scopes != null && settings.Scopes.Length > 0)
+
+// Parse command line arguments
+string folderName = null;
+string rubricFile = null;
+bool showHelp = false;
+
+for (int i = 0; i < args.Length; i++)
 {
-	Console.WriteLine("Scopes: " + string.Join(", ", settings.Scopes));
-}
-else
-{
-	Console.WriteLine("Scopes: (none)");
+    if (args[i] == "-f" && i + 1 < args.Length)
+    {
+        folderName = args[i + 1];
+        i++;
+    }
+    else if (args[i] == "-r" && i + 1 < args.Length)
+    {
+        rubricFile = args[i + 1];
+        i++;
+    }
+    else if (args[i] == "-h")
+    {
+        showHelp = true;
+    }
 }
 
-// Ejemplo de uso de GoogleServices
+if (showHelp || args.Length == 0 || string.IsNullOrWhiteSpace(folderName) || string.IsNullOrWhiteSpace(rubricFile))
+{
+    Console.WriteLine("Usage: dotnet run -- -f <GoogleFolderName> -r <rubricFile>");
+    Console.WriteLine("Evaluates Google Docs documents in a Google Drive folder using AI. The evaluation criteria must be provided in the rubric file.");
+    return;
+}
+
+
 try
 {
     var googleServices = new GoogleServices();
     googleServices.Init(settings);
     Console.WriteLine("GoogleServices inicializado correctamente.");
 
-    // Solicitar nombre de carpeta y llamar a EvaluateFolderByNameAsync
-    Console.WriteLine("Introduce el nombre de la carpeta de Google Drive a evaluar:");
-    var folderName = Console.ReadLine();
+    
     if (!string.IsNullOrWhiteSpace(folderName))
     {
         var docs = await googleServices.GetGoogleDocsByFolderNameAsync(folderName);
         Console.WriteLine($"Se encontraron {docs.Length} documentos en la carpeta '{folderName}':");
         // Cargar configuración de ChatGPT
     var chatGptSettings = ConfigurationLoader.LoadChatGPTSettings();
-        var chatGptService = new ChatGPTService(chatGptSettings.ApiKey!);
+    var chatGptService = new ChatGPTService(chatGptSettings.ApiKey!);
 
     // Lista para acumular resultados JSON
     var resultadosJson = new Dictionary<string, object>();
+
+    // Leer la rúbrica desde el archivo proporcionado
+    string rubricaJson = File.ReadAllText(rubricFile);
 
         foreach (var doc in docs)
         {
@@ -58,7 +75,8 @@ try
             {
                 try
                 {
-                    var resultado = await chatGptService.EvaluarTextoConRubricaAsync(doc.DocumentText, "Rubrica");
+                    // Pasa el JSON de la rúbrica directamente
+                    var resultado = await chatGptService.EvaluarTextoConRubricaAsync(doc.DocumentText, rubricaJson);
                     var content = resultado.Choices?.FirstOrDefault()?.Message?.Content;
                     if (string.IsNullOrWhiteSpace(content))
                     {
